@@ -1,0 +1,119 @@
+/* Charts Container */
+.charts {
+  display: flex;
+  gap: 24px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+/* Chart Card */
+.chart-box {
+  flex: 1 1 300px; /* minimum width 300px, can grow */
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+
+  /* Soft shadow for modern UI */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  /* Smooth hover effect */
+  transition: all 0.3s ease;
+}
+
+/* Chart Title */
+.chart-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111827;
+  letter-spacing: 0.5px;
+}
+
+/* Optional: subtle divider under title */
+.chart-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #6366f1; /* nice accent color */
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* Pie wrapper & Legend */
+.pie-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* allow legend and chart to stack */
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 100px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.color-box {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend-text {
+  flex: 1;
+  color: #374151;
+}
+
+.legend-value {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .chart-title {
+    font-size: 16px;
+  }
+  .legend-item {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .charts {
+    flex-direction: column; /* stack charts vertically */
+  }
+  .pie-wrapper {
+    flex-direction: column; /* stack chart & legend vertically */
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-box {
+    padding: 15px;
+  }
+  .chart-title {
+    font-size: 14px;
+  }
+  .legend-item {
+    font-size: 12px;
+  }
+  .color-box {
+    width: 10px;
+    height: 10px;
+  }
+}
