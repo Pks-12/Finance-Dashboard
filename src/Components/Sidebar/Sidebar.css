@@ -1,0 +1,64 @@
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background: #f8fafc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-right: 1px solid #e2e8f0;
+  box-sizing: border-box;
+  position: relative; /* no fixed, no left hiding */
+}
+
+.sidebar button {
+  padding: 10px;
+  border: none;
+  background: #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  background: #cbd5f5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 160px;
+    padding: 15px;
+  }
+  .sidebar button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+    padding: 15px;
+    height: auto; /* sidebar height adjusts to content */
+    position: relative; /* stays in flow */
+    border-right: none; /* optional: remove border for mobile */
+  }
+  .sidebar button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 150px;
+    padding: 12px;
+  }
+  .sidebar button {
+    padding: 7px;
+    font-size: 7px;
+  }
+}
