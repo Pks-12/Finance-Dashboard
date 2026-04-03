@@ -1,0 +1,64 @@
+/* Insights Container */
+.insights-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* spacing between insight cards */
+}
+
+/* Insight Card */
+.insight-card {
+  background: linear-gradient(135deg, #ffffff, #f0f4ff);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 0; /* gap is handled by container */
+  transition: all 0.3s ease;
+}
+
+/* Insight Card Hover Effect (optional) */
+.insight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Card Title */
+.insight-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Card Text */
+.insight-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .insight-card h3 {
+    font-size: 1rem;
+  }
+  .insight-card p {
+    font-size: 0.9rem;
+  }
+  .insights-container {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .insight-card {
+    padding: 15px;
+  }
+  .insight-card h3 {
+    font-size: 0.95rem;
+  }
+  .insight-card p {
+    font-size: 0.85rem;
+  }
+}
